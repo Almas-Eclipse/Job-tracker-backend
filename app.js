@@ -27,9 +27,11 @@ app.get("/", (req, res) => {
 
 const authRoutes = require("./routes/auth.routes");
 const jobRoutes = require("./routes/job.routes");
+const noteRoutes = require("./routes/note.routes");
 
 app.use("/auth", authRoutes);
 app.use("/api/jobs", jobRoutes);
+app.use("/api/jobs", noteRoutes);
 
 
 app.use((err, req, res, next) => {
